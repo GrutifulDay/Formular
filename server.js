@@ -1,3 +1,4 @@
+// server 
 const express = require("express")
 require("dotenv").config()
 
@@ -11,3 +12,14 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log((`🚀 Server běží na http://localhost:${PORT}`));
 })
+
+//  mongo 
+const mongoose = require("mongoose")
+require("dotenv").config() //nacitani promennych z .env
+
+// pripojeni k MongoDB 
+mongoose.connect(process.env.MONGO_URI)
+
+.then(() => console.log('👍 pripojeno'))
+.catch(err => console.error('❌ Chyba připojení k MongoDB:', err))
+
