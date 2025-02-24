@@ -1,3 +1,5 @@
+const User = require("./models/User")
+
 // server 
 const express = require("express")
 require("dotenv").config()
@@ -23,3 +25,21 @@ mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log('👍 pripojeno'))
 .catch(err => console.error('❌ Chyba připojení k MongoDB:', err))
 
+
+// testovani uzivatele 
+const createTestUser = async () => {
+    try {
+        const newUser = new User ({
+            name: "testovaci uzivatel",
+            email: "text@example.com", 
+            password: "heslo123"
+        })
+
+        await newUser.save() 
+        console.log('👍 testovaci uzivatel vytvoren');
+    } catch (error) {
+        console.error('❌ Chyba při vytváření uživatele:', error)
+    }
+}
+
+createTestUser()
