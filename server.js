@@ -43,3 +43,27 @@ const createTestUser = async () => {
 }
 
 createTestUser()
+
+// 
+app.post("/api/users", async (req, res) => {
+    try {
+
+        // ziskani dat z pozadavku
+        const { name, email, password } = req.body 
+
+        // overeni existujiciho uzivatele
+        const existingUser = await User.findOne({ email })
+
+        if (existingUser) {
+            return res.status(400).json({ error: "Uzivatel s timto emailem jiz existuje"})
+        }
+
+        const newUser = new User ({ name, email, password, createdAt: new Date() })
+        await newUser.save()
+
+        res.status(201).json({ message: "uzivatel vytvoren", user: newUser})
+    } catch (error) {
+        console.error("❌ Chyba při vytváření uživatele:", error);
+        res.status(500).json({ error: "Neco se pokazilo"})
+    }
+})
