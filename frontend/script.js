@@ -1,27 +1,27 @@
 document.getElementById("registerForm").addEventListener("submit", async function (event) {
-    event.preventDefault();
+    event.preventDefault()
 
     const form = event.target // ulozim cely formular 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
-    const confirmPassword = document.getElementById("confirmPassword").value.trim();
-    const errorMessage = document.getElementById("errorMessage");
+    const name = document.getElementById("name").value.trim()
+    const email = document.getElementById("email").value.trim()
+    const password = document.getElementById("password").value.trim()
+    const confirmPassword = document.getElementById("confirmPassword").value.trim()
+    const errorMessage = document.getElementById("errorMessage")
 
     // Reset chyby zpravy
-    errorMessage.textContent = "";
+    errorMessage.textContent = ""
 
     if (password !== confirmPassword) {
-        errorMessage.textContent = "Hesla se neshodují";
-        return;
+        errorMessage.textContent = "Hesla se neshodují"
+        return
     }
 
     if (password.length < 6) {
-        errorMessage.textContent = "Heslo musí mít alespoň 6 znaků";
-        return;
+        errorMessage.textContent = "Heslo musí mít alespoň 6 znaků"
+        return
     }
 
-    console.log("➡️ Odesílám request na backend:", { name, email, password });
+    console.log("➡️ Odesílám request na backend:", { name, email, password })
 
     // Odesílání dat na backend
     try {
@@ -31,24 +31,24 @@ document.getElementById("registerForm").addEventListener("submit", async functio
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({ name, email, password })
-        });
+        })
 
-        const data = await response.json();
+        const data = await response.json()
 
         if (!response.ok) {
-            throw new Error(data.error || "Registrace selhala");
+            throw new Error(data.error || "Registrace selhala")
         }
 
         // ulozim jmeno do localStorage
-        localStorage.setItem("username", name);
+        localStorage.setItem("username", name)
         window.location.href = "welcome.html"
 
-        console.log("✅ Registrace úspěšná! Uživatel:", data);
+        console.log("✅ Registrace úspěšná! Uživatel:", data)
 
         form.reset()
 
     } catch (error) {
-        errorMessage.textContent = error.message;
-        console.error("❌ Chyba registrace:", error.message);
+        errorMessage.textContent = error.message
+        console.error("❌ Chyba registrace:", error.message)
     }
-});
+})
