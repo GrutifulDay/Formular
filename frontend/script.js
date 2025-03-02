@@ -41,6 +41,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
 
         // ulozim jmeno do localStorage
         localStorage.setItem("username", name);
+        window.location.href = "welcome.html"
 
         console.log("✅ Registrace úspěšná! Uživatel:", data);
 
