@@ -38,8 +38,6 @@ const createTestUser = async () => {
     }
 }
 
-// Spustíme vytvoření testovacího uživatele
-createTestUser()
 
 // Endpoint pro registraci uživatele (POST /api/users)
 app.post("/api/users", async (req, res) => {
