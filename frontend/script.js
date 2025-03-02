@@ -1,13 +1,14 @@
 document.getElementById("registerForm").addEventListener("submit", async function (event) {
     event.preventDefault();
 
+    const form = event.target // ulozim cely formular 
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
     const confirmPassword = document.getElementById("confirmPassword").value.trim();
     const errorMessage = document.getElementById("errorMessage");
 
-    // Reset chyby
+    // Reset chyby zpravy
     errorMessage.textContent = "";
 
     if (password !== confirmPassword) {
@@ -38,8 +39,12 @@ document.getElementById("registerForm").addEventListener("submit", async functio
             throw new Error(data.error || "Registrace selhala");
         }
 
+        // ulozim jmeno do localStorage
         localStorage.setItem("username", name);
+
         console.log("✅ Registrace úspěšná! Uživatel:", data);
+
+        form.reset()
 
     } catch (error) {
         errorMessage.textContent = error.message;

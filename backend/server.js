@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 const bcrypt = require("bcryptjs");
 
 dotenv.config();
-const User = require("./users"); // ✅ Opravená cesta
+const User = require("./models/User"); // ✅ Opravená cesta
 
 // Vytvoření serveru
 const app = express();
@@ -18,10 +18,7 @@ app.use(cors()); // ✅ Povolení požadavků z frontendového portu
 app.use(express.static(path.join(__dirname, "../frontend"))); // ✅ Servírování frontend složky
 
 // Připojení k MongoDB
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('👍 Připojeno k MongoDB'))
     .catch(err => console.error('❌ Chyba připojení k MongoDB:', err));
 
