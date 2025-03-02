@@ -7,7 +7,7 @@ const User = require("./models/User") // ✅ Správná cesta k modelu
 
 // Vytvoření serveru
 const app = express()
-const PORT = process.env.PORT || 5500
+const PORT = process.env.PORT || 3000
 
 // Middleware
 app.use(express.json()) // ✅ Parsování JSON těla požadavků

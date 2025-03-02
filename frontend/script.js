@@ -7,8 +7,8 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     const confirmPassword = document.getElementById("confirmPassword").value.trim()
     const errorMessage = document.getElementById("errorMessage").value.trim()
 
-
-    errorMessage.textContent = ""
+    // reset chyby
+    errorMessage.textContent = "" 
 
     if (password !== confirmPassword) {
         errorMessage.textContent = "Hesla se neshodují"
@@ -20,8 +20,9 @@ document.getElementById("registerForm").addEventListener("submit", async functio
         return
     }
 
+    // odesilani dat na backend - zmenit v pripade jineho serveru / URL
     try {
-        const response = await fetch("http://localhost:5000/api/register", {
+        const response = await fetch("http://localhost:3000/api/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -29,15 +30,19 @@ document.getElementById("registerForm").addEventListener("submit", async functio
             body: JSON.stringify({ name, email, password })
         })
 
-        const data = await response.json()
+        const data = await response.json();
 
         if (!response.ok) {
             throw new Error(data.message || "Registrace Selhala")
         }
 
-        alert("registrace úspěšná")
-        window.location.href = "/login.html"
-    } catch (error) {
-        errorMessage.textContent = error.message
+       // Uložíme jméno do localStorage
+        localStorage.setItem("username", name);
+
+        alert("Registrace úspěšná!")
+
+        window.location.href = "login.html";
+        } catch (error) {
+        errorMessage.textContent = error.message;
     }
 })
