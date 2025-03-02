@@ -20,6 +20,8 @@ document.getElementById("registerForm").addEventListener("submit", async functio
         return;
     }
 
+    console.log("➡️ Odesílám request na backend:", { name, email, password });
+
     // Odesílání dat na backend
     try {
         const response = await fetch("http://localhost:3000/api/users", {
@@ -33,14 +35,12 @@ document.getElementById("registerForm").addEventListener("submit", async functio
         const data = await response.json();
 
         if (!response.ok) {
-            throw new Error(data.message || "Registrace selhala");
+            throw new Error(data.error || "Registrace selhala");
         }
 
-        // Uložíme jméno do localStorage
         localStorage.setItem("username", name);
-
         console.log("✅ Registrace úspěšná! Uživatel:", data);
-        
+
     } catch (error) {
         errorMessage.textContent = error.message;
         console.error("❌ Chyba registrace:", error.message);
