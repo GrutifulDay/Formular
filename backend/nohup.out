@@ -1,32 +1,26 @@
-🚀 Server běží na http://localhost:3000
-👍 Připojeno k MongoDB
-🔍 Přihlášení pro: t@t.cz s heslem: tttttt
-✅ Uživatelský účet nalezen: {
-  _id: new ObjectId('67c5a7b81c26870e44c4ce07'),
-  name: 't@t',
-  email: 't@t.cz',
-  password: '$2b$10$0Wk5KyElctBlQkcwPIqu7ODQdEeu8IoBlV2VTUvbiU.QP/KFdK0oG',
-  createdAt: 2025-03-03T12:59:36.891Z,
-  __v: 0
+node:events:485
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at Function.listen (/Users/terezka/1www/Project/projekt-pozdrav/backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/Users/terezka/1www/Project/projekt-pozdrav/backend/server.js:136:5)
+    at Module._compile (node:internal/modules/cjs/loader:1723:14)
+    at Object..js (node:internal/modules/cjs/loader:1888:10)
+    at Module.load (node:internal/modules/cjs/loader:1458:32)
+    at Function._load (node:internal/modules/cjs/loader:1275:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1973:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
 }
-🔐 Porovnání hesla: true
-🔍 Přihlášení pro: t@t.cz s heslem: tttttt
-✅ Uživatelský účet nalezen: {
-  _id: new ObjectId('67c5a7b81c26870e44c4ce07'),
-  name: 't@t',
-  email: 't@t.cz',
-  password: '$2b$10$0Wk5KyElctBlQkcwPIqu7ODQdEeu8IoBlV2VTUvbiU.QP/KFdK0oG',
-  createdAt: 2025-03-03T12:59:36.891Z,
-  __v: 0
-}
-🔐 Porovnání hesla: true
-🔍 Přihlášení pro: t@t.cz s heslem: tttttt
-✅ Uživatelský účet nalezen: {
-  _id: new ObjectId('67c5a7b81c26870e44c4ce07'),
-  name: 't@t',
-  email: 't@t.cz',
-  password: '$2b$10$0Wk5KyElctBlQkcwPIqu7ODQdEeu8IoBlV2VTUvbiU.QP/KFdK0oG',
-  createdAt: 2025-03-03T12:59:36.891Z,
-  __v: 0
-}
-🔐 Porovnání hesla: true
+
+Node.js v23.7.0
