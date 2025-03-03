@@ -25,7 +25,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Testovací GET endpoint
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../frontend/index.html"));
+    res.sendFile(path.join(__dirname, "../frontend/registration.html"));
 });
 
 // ✅ **Registrace uživatele**
