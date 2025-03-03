@@ -39,11 +39,16 @@ document.getElementById("registerForm").addEventListener("submit", async functio
             throw new Error(data.error || "Registrace selhala")
         }
 
-        // ulozim jmeno do localStorage
-        localStorage.setItem("username", name)
-        window.location.href = "welcome.html"
+        try {
+            localStorage.setItem("username", name); // Uložení jména do Localstorage
+        } catch (e) {
+            console.warn("⚠️ Nelze uložit do localStorage:", e);
+        }
+
 
         console.log("✅ Registrace úspěšná! Uživatel:", data)
+
+        window.location.href = "welcome.html";
 
         form.reset()
 
