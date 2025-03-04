@@ -1,9 +1,7 @@
 🔍 DEBUG v db.js: MONGO_URI = mongodb://localhost:27017/pozdrav
 🔍 DEBUG: MONGO_URI = mongodb://localhost:27017/pozdrav
-(node:3387) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(node:807) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:3387) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(node:807) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
 🚀 Server běží na http://localhost:3000
 ✅ Připojeno k MongoDB
-🔍 [POST] /api/auth/register
-🔍 [POST] /register
