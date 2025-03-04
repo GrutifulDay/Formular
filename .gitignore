@@ -3,3 +3,4 @@ logs/
 logs/*.log
 .env
 nohup.out
+example.env

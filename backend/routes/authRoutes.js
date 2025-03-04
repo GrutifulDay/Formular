@@ -1,4 +1,9 @@
-// Přihlášení a registrace
+/**
+ * ✅ Router pro autentizaci uživatelů
+ * Obsahuje přihlášení, registraci a middleware pro logování.
+ *
+ * Používá: controllers/authController.js
+ */
 
 const express = require("express")
 const bcrypt = require("bcryptjs")
@@ -8,7 +13,14 @@ const rateLimit = require("express-rate-limit")
 
 const router = express.Router()
 
-// omezeni pocet pokusu o prihlaseni
+// ✅ Middleware pro logování příchozích requestů
+router.use((req, res, next) => {
+    res.setHeader("Content-Type", "application/json");
+    console.log(`🔍 [${req.method}] ${req.url}`);
+    next();
+});
+
+// ✅ Omezení počtu pokusů o přihlášení (Rate Limiting)
 const loginLimiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minut
     max: 5, // Max 5 pokusů
@@ -17,11 +29,9 @@ const loginLimiter = rateLimit({
         console.warn(`⛔ RATE-LIMIT TRIGGERED pro IP: ${req.ip}`)
         res.status(429).json({ error: "⛔ Příliš mnoho pokusů, zkuste to znovu za 15 minut." })
     }
-})
+});
 
-
-
-// ✅ **Přihlášení uživatele** S LIMITOVANYM POCTEM PRIHLASENIM
+// ✅ **Přihlášení uživatele**
 router.post("/login", loginLimiter, async (req, res) => {
     try {
         const { email, password } = req.body
@@ -32,7 +42,6 @@ router.post("/login", loginLimiter, async (req, res) => {
         }
 
         const isMatch = await bcrypt.compare(password, user.password)
-
         if (!isMatch) {
             return res.status(400).json({ error: "❌ Nesprávné heslo" })
         }
@@ -53,7 +62,7 @@ router.post("/login", loginLimiter, async (req, res) => {
         console.error("❌ Chyba při přihlašování:", error)
         res.status(500).json({ error: "Chyba serveru" })
     }
-})
+});
 
 // ✅ **Registrace uživatele**
 router.post("/register", async (req, res) => {
@@ -82,6 +91,6 @@ router.post("/register", async (req, res) => {
         console.error("❌ Chyba při registraci uživatele:", error)
         res.status(500).json({ error: "Chyba serveru" })
     }
-})
+});
 
-module.exports = router
+module.exports = router;
