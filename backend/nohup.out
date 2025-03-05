@@ -1,9 +1,1347 @@
 🔍 DEBUG v db.js: MONGO_URI = mongodb://localhost:27017/pozdrav
+🔍 DEBUG: HERO_API_URL = https://akabab.github.io/superhero-api/api/all.json
+🔍 DEBUG v server.js: MONGO_URI = mongodb://localhost:27017/pozdrav
 🔍 DEBUG: MONGO_URI = mongodb://localhost:27017/pozdrav
-(node:1553) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(node:7489) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:1553) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(node:7489) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
 🚀 Server běží na http://localhost:3000
 ✅ Připojeno k MongoDB
-🔍 [POST] /api/auth/register
-🔍 [POST] /register
+🔍 [POST] /login
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+📡 DEBUG: authHeader = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+📡 DEBUG: Token extrahován = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2M4MzJmOWYxNTRjMjIzZWQ4ZDFkZmQiLCJuYW1lIjoidGVzdCIsImlhdCI6MTc0MTIwMDEwMiwiZXhwIjoxNzQxMjAzNzAyfQ.2JgDeE3RWYEfzGk4bRV6srztgVZRt2iVldR_tJzFSOw
+✅ Token ověřen: {
+  userId: '67c832f9f154c223ed8d1dfd',
+  name: 'test',
+  iat: 1741200102,
+  exp: 1741203702
+}
+🔍 [POST] /login

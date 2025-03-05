@@ -5,13 +5,13 @@
  * Používá: controllers/authController.js
  */
 
-const express = require("express")
-const bcrypt = require("bcryptjs")
-const jwt = require("jsonwebtoken")
-const User = require("../models/User")
-const rateLimit = require("express-rate-limit")
+import express from "express";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import User from "../models/User.js"; // Přidat .js na konec
+import rateLimit from "express-rate-limit";
 
-const router = express.Router()
+const router = express.Router();
 
 // ✅ Middleware pro logování příchozích requestů
 router.use((req, res, next) => {
@@ -26,24 +26,24 @@ const loginLimiter = rateLimit({
     max: 5, // Max 5 pokusů
     message: { error: "⛔ Příliš mnoho pokusů, zkuste to znovu za 15 minut." },
     handler: (req, res, next) => {
-        console.warn(`⛔ RATE-LIMIT TRIGGERED pro IP: ${req.ip}`)
-        res.status(429).json({ error: "⛔ Příliš mnoho pokusů, zkuste to znovu za 15 minut." })
+        console.warn(`⛔ RATE-LIMIT TRIGGERED pro IP: ${req.ip}`);
+        res.status(429).json({ error: "⛔ Příliš mnoho pokusů, zkuste to znovu za 15 minut." });
     }
 });
 
 // ✅ **Přihlášení uživatele**
 router.post("/login", loginLimiter, async (req, res) => {
     try {
-        const { email, password } = req.body
-        const user = await User.findOne({ email })
+        const { email, password } = req.body;
+        const user = await User.findOne({ email });
 
         if (!user) {
-            return res.status(400).json({ error: "❌ Uživatel neexistuje" })
+            return res.status(400).json({ error: "❌ Uživatel neexistuje" });
         }
 
-        const isMatch = await bcrypt.compare(password, user.password)
+        const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
-            return res.status(400).json({ error: "❌ Nesprávné heslo" })
+            return res.status(400).json({ error: "❌ Nesprávné heslo" });
         }
 
         // ✅ Vytvoření JWT tokenu
@@ -51,46 +51,47 @@ router.post("/login", loginLimiter, async (req, res) => {
             { userId: user._id, name: user.name },
             process.env.JWT_SECRET,
             { expiresIn: "1h" }
-        )
+        );
 
         res.json({
             message: "✅ Přihlášení úspěšné!",
             token,
             user: { name: user.name, email: user.email },
-        })
+        });
     } catch (error) {
-        console.error("❌ Chyba při přihlašování:", error)
-        res.status(500).json({ error: "Chyba serveru" })
+        console.error("❌ Chyba při přihlašování:", error);
+        res.status(500).json({ error: "Chyba serveru" });
     }
 });
 
 // ✅ **Registrace uživatele**
 router.post("/register", async (req, res) => {
     try {
-        const { name, email, password } = req.body
+        const { name, email, password } = req.body;
 
         if (await User.findOne({ email })) {
-            return res.status(400).json({ error: "😱 Uživatel s tímto emailem již existuje" })
+            return res.status(400).json({ error: "😱 Uživatel s tímto emailem již existuje" });
         }
         if (await User.findOne({ name })) {
-            return res.status(400).json({ error: "🤔 Uživatel s tímto jménem již existuje" })
+            return res.status(400).json({ error: "🤔 Uživatel s tímto jménem již existuje" });
         }
 
-        const hashedPassword = await bcrypt.hash(password, 10)
+        const hashedPassword = await bcrypt.hash(password, 10);
 
         const newUser = new User({
             name,
             email,
             password: hashedPassword,
             createdAt: new Date(),
-        })
+        });
 
-        await newUser.save()
-        res.status(201).json({ message: "👍 Uživatel vytvořen", user: newUser })
+        await newUser.save();
+        res.status(201).json({ message: "👍 Uživatel vytvořen", user: newUser });
     } catch (error) {
-        console.error("❌ Chyba při registraci uživatele:", error)
-        res.status(500).json({ error: "Chyba serveru" })
+        console.error("❌ Chyba při registraci uživatele:", error);
+        res.status(500).json({ error: "Chyba serveru" });
     }
 });
 
-module.exports = router;
+// ✅ Opravený export pro ES moduly
+export default router;

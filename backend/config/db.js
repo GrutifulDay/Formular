@@ -1,15 +1,7 @@
-// Připojení k MongoDB
+import dotenv from "dotenv";
+import mongoose from "mongoose";
 
-// const mongoose = require("mongoose")
-
-// mongoose.connect(process.env.MONGO_URI)
-//     .then(() => console.log("👍 Připojeno k MongoDB"))
-//     .catch((err) => console.error("❌ Chyba připojení k MongoDB:", err))
-
-// module.exports = mongoose
-
-
-const mongoose = require("mongoose");
+dotenv.config(); // ✅ MUSI BYT, PROTOZE SE PAK NENACITA A HAZÍ CHYBU 
 
 console.log("🔍 DEBUG v db.js: MONGO_URI =", process.env.MONGO_URI);
 
@@ -31,6 +23,8 @@ const connectDB = async () => {
     }
 };
 
+// Spuštění připojení k databázi
 connectDB();
 
-module.exports = mongoose;
+// ✅ Opravený export pro ES moduly
+export default mongoose;
