@@ -1,5 +1,5 @@
 /**
- * ✅ Hlavní serverový soubor pro projekt Pozdrav
+ * 
  * - Připojuje MongoDB přes `config/db.js`
  * - Definuje middleware pro CORS, JSON a statické soubory
  * - Registruje API routy pro autentizaci a uživatele
@@ -33,6 +33,19 @@ console.log("🔍 DEBUG: MONGO_URI =", process.env.MONGO_URI);
 
 app.set("trust proxy", 1);
 
+
+// Fetch Marvel
+app.get('/api/characters', async (req, res) => {
+    const ts = Date.now();
+    const hash = crypto.createHash('md5').update(ts + process.env.PRIVATE_KEY_MARVEL + process.env.PUBLIC_KEY_MARVEL).digest('hex');
+
+    const url = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${process.env.PUBLIC_KEY_MARVEL}&hash=${hash}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    
+    res.json(data);
+});
+
 // ✅ Middleware
 app.use(express.json()); // 📌 Automatická konverze JSON
 app.use(cors()); // 📌 Povolení CORS pro komunikaci mezi frontendem a backendem
@@ -54,6 +67,7 @@ app.use("/api/hero", heroRoutes);
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend/registration.html"));
 });
+
 
 // ✅ Spuštění serveru
 app.listen(PORT, () => {

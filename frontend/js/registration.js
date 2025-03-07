@@ -2,14 +2,14 @@
  * ✅ Registrace uživatele (frontend)
  * - Odesílá registrační formulář na backend
  * - Kontroluje, zda hesla souhlasí a zda mají správnou délku
- * - Ukládá uživatelské jméno do localStorage
+ * - Ukládá uživatelský token a jméno do localStorage
  * - Přesměrovává na stránku "welcome.html" po úspěšné registraci
  */
 
 document.getElementById("registerForm").addEventListener("submit", async function (event) {
     event.preventDefault(); // ✅ Zabráníme výchozímu odeslání formuláře
 
-    const form = event.target; // ✅ Uložíme si celý formulář
+    const form = event.target;
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
@@ -42,16 +42,21 @@ document.getElementById("registerForm").addEventListener("submit", async functio
             body: JSON.stringify({ name, email, password })
         });
 
+        const data = await response.json();
+
         if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.error || "Registrace selhala");
+            throw new Error(data.error || "Registrace selhala");
         }
 
-        const data = await response.json(); // ✅ Odpověď parsujeme pouze jednou
+        if (!data.token) {
+            throw new Error("Chyba: Nelze získat token po registraci.");
+        }
+
         console.log("✅ Registrace úspěšná!", data);
 
-        // ✅ Uložení jména do localStorage
+        // ✅ Uložení tokenu a jména do LocalStorage
         try {
+            localStorage.setItem("token", data.token);
             localStorage.setItem("username", name);
         } catch (e) {
             console.warn("⚠️ Nelze uložit do localStorage:", e);

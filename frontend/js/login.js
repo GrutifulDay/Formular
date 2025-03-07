@@ -1,16 +1,16 @@
 document.getElementById("loginForm").addEventListener("submit", async function (event) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const email = document.getElementById("email").value.trim()
-    const password = document.getElementById("password").value.trim()
-    const errorMessage = document.getElementById("errorMessage")
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const errorMessage = document.getElementById("errorMessage");
 
     // chybova zprava
-    errorMessage.textContent = ""
+    errorMessage.textContent = "";
 
     if (!email || !password) {
-        errorMessage.textContent = "Vyplňte všechna pole!"
-        return
+        errorMessage.textContent = "Vyplňte všechna pole!";
+        return;
     }
 
     try {
@@ -22,24 +22,25 @@ document.getElementById("loginForm").addEventListener("submit", async function (
             body: JSON.stringify({ email, password })
         });
 
-        const data = await response.json()
+        const data = await response.json();
 
         if (!response.ok) {
-            throw new Error(data.error || "Přihlášení selhalo")
+            throw new Error(data.error || "Přihlášení selhalo");
         }
 
-        if (!data.user || !data.user.name) {
-            throw new Error("Chyba: Nelze získat uživatelské jméno.")
+        if (!data.user || !data.user.name || !data.token) {
+            throw new Error("Chyba: Nelze získat uživatelské údaje nebo token.");
         }
 
-        // Uložení jména do LocalStorage
-        localStorage.setItem("username", data.user.name)
+        // ✅ Uložení tokenu a jména do LocalStorage
+        localStorage.setItem("token", data.token); // Ukládáme JWT token
+        localStorage.setItem("username", data.user.name);
 
-        console.log("✅ Přihlášení úspěšné!", data)
-        window.location.href = "welcome.html" // Přesměrování po přihlášení
+        console.log("✅ Přihlášení úspěšné!", data);
+        window.location.href = "welcome.html"; // Přesměrování po přihlášení
 
     } catch (error) {
-        errorMessage.textContent = error.message
-        console.error("❌ Chyba při přihlašování:", error.message)
+        errorMessage.textContent = error.message;
+        console.error("❌ Chyba při přihlašování:", error.message);
     }
-})
+});
