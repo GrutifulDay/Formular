@@ -1,15 +1,10 @@
 🔍 DEBUG v db.js: MONGO_URI = mongodb://localhost:27017/pozdrav
-🔍 DEBUG: HERO_API_URL = https://akabab.github.io/superhero-api/api/all.json
+🔍 DEBUG: HERO_API_URL = undefined
 🔍 DEBUG v server.js: MONGO_URI = mongodb://localhost:27017/pozdrav
 🔍 DEBUG: MONGO_URI = mongodb://localhost:27017/pozdrav
-(node:12802) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(node:15637) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:12802) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(node:15637) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
 🚀 Server běží na http://localhost:3000
 ✅ Připojeno k MongoDB
-🔍 [POST] /login
-🔍 [POST] /login
-🔍 [POST] /login
-🔍 [POST] /login
-🔍 [POST] /login
 🔍 [POST] /login
