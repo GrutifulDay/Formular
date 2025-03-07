@@ -33,30 +33,17 @@ console.log("🔍 DEBUG: MONGO_URI =", process.env.MONGO_URI);
 
 app.set("trust proxy", 1);
 
-
-// Fetch Marvel
-app.get('/api/characters', async (req, res) => {
-    const ts = Date.now();
-    const hash = crypto.createHash('md5').update(ts + process.env.PRIVATE_KEY_MARVEL + process.env.PUBLIC_KEY_MARVEL).digest('hex');
-
-    const url = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${process.env.PUBLIC_KEY_MARVEL}&hash=${hash}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    
-    res.json(data);
-});
-
 // ✅ Middleware
 app.use(express.json()); // 📌 Automatická konverze JSON
-app.use(cors()); // 📌 Povolení CORS pro komunikaci mezi frontendem a backendem
+// app.use(cors()); // 📌 Povolení CORS pro komunikaci mezi frontendem a backendem
 app.use(express.static(path.join(__dirname, "../frontend"))); // 📌 Statické soubory
 
 // ✅ Middleware pro správné nastavení odpovědi jako JSON
 app.use(cors({
-    origin: "http://127.0.0.1:5501", // ✅ Povolení pro tvůj frontend
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true // ✅ Povolení pro přihlášení
-}))
+    origin: "http://127.0.0.1:5501",  // adresa frontendu
+    methods: "GET, POST, PUT, DELETE",
+    credentials: true
+}));
 
 // ✅ API Routes - registrace 
 app.use("/api/auth", authRoutes);
@@ -67,6 +54,24 @@ app.use("/api/hero", heroRoutes);
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend/registration.html"));
 });
+
+// API Fetch 🔌
+app.get("/api/hero/:id", async (req, res) => {
+    try {
+        const heroId = req.params.id
+        const apiUrl = `${process.env.FETCH_API_HERO}${heroId}.json`
+        const response = await fetch(apiUrl)
+        if (!response.ok) {
+            throw new Error("Chyba při načítání dat")
+        }
+
+        const data = await response.json()
+        res.json(data)
+    } catch (error) {
+        console.error("Chyba na serveru:", error);
+        res.status(500).json({ error: "Chyba na serveru" })
+    }
+})
 
 
 // ✅ Spuštění serveru
